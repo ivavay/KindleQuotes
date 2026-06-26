@@ -25,12 +25,24 @@ struct Provider: TimelineProvider {
         let result = WidgetQuoteStore.loadResult()
         let quotes = result.quotes
         let currentDate = Date()
-        let entries = (0..<6).map { index in
-            let entryDate = Calendar.current.date(byAdding: .hour, value: index * rotationIntervalHours, to: currentDate) ?? currentDate
+
+        var entries = [
+            QuoteEntry(date: currentDate, quote: quote(for: currentDate, in: quotes), message: result.message)
+        ]
+
+        let firstRotationDate = nextRotationDate(after: currentDate)
+        entries += (0..<12).map { index in
+            let entryDate = Calendar.current.date(byAdding: .hour, value: index * rotationIntervalHours, to: firstRotationDate) ?? firstRotationDate
             return QuoteEntry(date: entryDate, quote: quote(for: entryDate, in: quotes), message: result.message)
         }
 
         completion(Timeline(entries: entries, policy: .after(entries.last?.date ?? currentDate)))
+    }
+
+    private func nextRotationDate(after date: Date) -> Date {
+        let rotationIntervalSeconds = TimeInterval(rotationIntervalHours * 60 * 60)
+        let nextBucket = floor(date.timeIntervalSince1970 / rotationIntervalSeconds) + 1
+        return Date(timeIntervalSince1970: nextBucket * rotationIntervalSeconds)
     }
 
     private func quote(for date: Date, in quotes: [Quote]) -> Quote? {
