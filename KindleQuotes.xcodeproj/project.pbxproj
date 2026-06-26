@@ -6,23 +6,106 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1B2C3D42FED400000000002 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D42FED400000000001 /* XCTest.framework */; };
+		F083C0262FED3BE80047AF63 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F083C0252FED3BE70047AF63 /* WidgetKit.framework */; };
+		F083C0282FED3BE80047AF63 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F083C0272FED3BE80047AF63 /* SwiftUI.framework */; };
+		F083C0372FED3BEA0047AF63 /* KindleHighlightsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F083C0232FED3BE70047AF63 /* KindleHighlightsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1B2C3D42FED400000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F083C0092FED3B6B0047AF63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F083C0102FED3B6C0047AF63;
+			remoteInfo = KindleQuotes;
+		};
+		F083C0352FED3BEA0047AF63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F083C0092FED3B6B0047AF63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F083C0222FED3BE70047AF63;
+			remoteInfo = KindleHighlightsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F083C03C2FED3BEA0047AF63 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F083C0372FED3BEA0047AF63 /* KindleHighlightsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A1B2C3D42FED400000000001 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		A1B2C3D42FED400000000003 /* KindleQuotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KindleQuotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F083C0112FED3B6C0047AF63 /* KindleQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KindleQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F083C0232FED3BE70047AF63 /* KindleHighlightsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KindleHighlightsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F083C0252FED3BE70047AF63 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F083C0272FED3BE80047AF63 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F083C0382FED3BEA0047AF63 /* Exceptions for "KindleHighlights" folder in "KindleHighlightsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F083C0222FED3BE70047AF63 /* KindleHighlightsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A1B2C3D42FED400000000004 /* KindleQuotesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KindleQuotesTests;
+			sourceTree = "<group>";
+		};
 		F083C0132FED3B6C0047AF63 /* KindleQuotes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = KindleQuotes;
 			sourceTree = "<group>";
 		};
+		F083C0292FED3BE80047AF63 /* KindleHighlights */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F083C0382FED3BEA0047AF63 /* Exceptions for "KindleHighlights" folder in "KindleHighlightsExtension" target */,
+			);
+			path = KindleHighlights;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A1B2C3D42FED400000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D42FED400000000002 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F083C00E2FED3B6C0047AF63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F083C0202FED3BE70047AF63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F083C0282FED3BE80047AF63 /* SwiftUI.framework in Frameworks */,
+				F083C0262FED3BE80047AF63 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				F083C0132FED3B6C0047AF63 /* KindleQuotes */,
+				F083C0292FED3BE80047AF63 /* KindleHighlights */,
+				A1B2C3D42FED400000000004 /* KindleQuotesTests */,
+				F083C0242FED3BE70047AF63 /* Frameworks */,
 				F083C0122FED3B6C0047AF63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,13 +127,48 @@
 			isa = PBXGroup;
 			children = (
 				F083C0112FED3B6C0047AF63 /* KindleQuotes.app */,
+				F083C0232FED3BE70047AF63 /* KindleHighlightsExtension.appex */,
+				A1B2C3D42FED400000000003 /* KindleQuotesTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F083C0242FED3BE70047AF63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D42FED400000000001 /* XCTest.framework */,
+				F083C0252FED3BE70047AF63 /* WidgetKit.framework */,
+				F083C0272FED3BE80047AF63 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A1B2C3D42FED400000000005 /* KindleQuotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D42FED400000000014 /* Build configuration list for PBXNativeTarget "KindleQuotesTests" */;
+			buildPhases = (
+				A1B2C3D42FED400000000008 /* Sources */,
+				A1B2C3D42FED400000000006 /* Frameworks */,
+				A1B2C3D42FED400000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1B2C3D42FED400000000011 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A1B2C3D42FED400000000004 /* KindleQuotesTests */,
+			);
+			name = KindleQuotesTests;
+			packageProductDependencies = (
+			);
+			productName = KindleQuotesTests;
+			productReference = A1B2C3D42FED400000000003 /* KindleQuotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F083C0102FED3B6C0047AF63 /* KindleQuotes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F083C01C2FED3B6E0047AF63 /* Build configuration list for PBXNativeTarget "KindleQuotes" */;
@@ -55,10 +176,12 @@
 				F083C00D2FED3B6C0047AF63 /* Sources */,
 				F083C00E2FED3B6C0047AF63 /* Frameworks */,
 				F083C00F2FED3B6C0047AF63 /* Resources */,
+				F083C03C2FED3BEA0047AF63 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F083C0362FED3BEA0047AF63 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F083C0132FED3B6C0047AF63 /* KindleQuotes */,
@@ -70,6 +193,28 @@
 			productReference = F083C0112FED3B6C0047AF63 /* KindleQuotes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F083C0222FED3BE70047AF63 /* KindleHighlightsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F083C0392FED3BEA0047AF63 /* Build configuration list for PBXNativeTarget "KindleHighlightsExtension" */;
+			buildPhases = (
+				F083C01F2FED3BE70047AF63 /* Sources */,
+				F083C0202FED3BE70047AF63 /* Frameworks */,
+				F083C0212FED3BE70047AF63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F083C0292FED3BE80047AF63 /* KindleHighlights */,
+			);
+			name = KindleHighlightsExtension;
+			packageProductDependencies = (
+			);
+			productName = KindleHighlightsExtension;
+			productReference = F083C0232FED3BE70047AF63 /* KindleHighlightsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -80,7 +225,14 @@
 				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
+					A1B2C3D42FED400000000005 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = F083C0102FED3B6C0047AF63;
+					};
 					F083C0102FED3B6C0047AF63 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					F083C0222FED3BE70047AF63 = {
 						CreatedOnToolsVersion = 26.5;
 					};
 				};
@@ -100,12 +252,28 @@
 			projectRoot = "";
 			targets = (
 				F083C0102FED3B6C0047AF63 /* KindleQuotes */,
+				F083C0222FED3BE70047AF63 /* KindleHighlightsExtension */,
+				A1B2C3D42FED400000000005 /* KindleQuotesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A1B2C3D42FED400000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F083C00F2FED3B6C0047AF63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F083C0212FED3BE70047AF63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +283,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A1B2C3D42FED400000000008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F083C00D2FED3B6C0047AF63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F083C01F2FED3BE70047AF63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +306,72 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A1B2C3D42FED400000000011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F083C0102FED3B6C0047AF63 /* KindleQuotes */;
+			targetProxy = A1B2C3D42FED400000000010 /* PBXContainerItemProxy */;
+		};
+		F083C0362FED3BEA0047AF63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F083C0222FED3BE70047AF63 /* KindleHighlightsExtension */;
+			targetProxy = F083C0352FED3BEA0047AF63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A1B2C3D42FED400000000012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.ivychen.KindleQuotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KindleQuotes.app/Contents/MacOS/KindleQuotes";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A1B2C3D42FED400000000013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.ivychen.KindleQuotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KindleQuotes.app/Contents/MacOS/KindleQuotes";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		F083C01A2FED3B6E0047AF63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -248,9 +495,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KindleQuotes/KindleQuotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 489463TQ2X;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -278,9 +527,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KindleQuotes/KindleQuotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 489463TQ2X;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -303,9 +554,84 @@
 			};
 			name = Release;
 		};
+		F083C03A2FED3BEA0047AF63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = KindleHighlights/KindleHighlights.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 489463TQ2X;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KindleHighlights/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KindleHighlights;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.ivychen.KindleQuotes.KindleHighlights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F083C03B2FED3BEA0047AF63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = KindleHighlights/KindleHighlights.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 489463TQ2X;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KindleHighlights/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KindleHighlights;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.ivychen.KindleQuotes.KindleHighlights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1B2C3D42FED400000000014 /* Build configuration list for PBXNativeTarget "KindleQuotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D42FED400000000012 /* Debug */,
+				A1B2C3D42FED400000000013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F083C00C2FED3B6B0047AF63 /* Build configuration list for PBXProject "KindleQuotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -320,6 +646,15 @@
 			buildConfigurations = (
 				F083C01D2FED3B6E0047AF63 /* Debug */,
 				F083C01E2FED3B6E0047AF63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F083C0392FED3BEA0047AF63 /* Build configuration list for PBXNativeTarget "KindleHighlightsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F083C03A2FED3BEA0047AF63 /* Debug */,
+				F083C03B2FED3BEA0047AF63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

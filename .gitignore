@@ -1,0 +1,15 @@
+.DS_Store
+
+# Xcode build output
+.DerivedData/
+DerivedData/
+build/
+
+# Xcode user-local settings
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# Private local quote data generated during debugging/testing.
+# The app persists real quote data in the App Group container at runtime.
+KindleHighlights/BundledQuotes.json
