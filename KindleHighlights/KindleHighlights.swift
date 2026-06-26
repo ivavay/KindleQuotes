@@ -49,8 +49,50 @@ struct Provider: TimelineProvider {
         guard !quotes.isEmpty else { return nil }
         let rotationIntervalSeconds = TimeInterval(rotationIntervalHours * 60 * 60)
         let rotationBucket = Int(date.timeIntervalSince1970 / rotationIntervalSeconds)
-        let index = abs(rotationBucket) % quotes.count
+        let index = shuffledIndex(for: rotationBucket, quoteCount: quotes.count)
         return quotes[index]
+    }
+
+    private func shuffledIndex(for rotationBucket: Int, quoteCount: Int) -> Int {
+        guard quoteCount > 1 else { return 0 }
+
+        let positionInCycle = positiveModulo(rotationBucket, quoteCount)
+        let cycle = rotationBucket / quoteCount
+        let shuffledIndexes = shuffledIndexes(count: quoteCount, seed: cycle)
+        return shuffledIndexes[positionInCycle]
+    }
+
+    private func shuffledIndexes(count: Int, seed: Int) -> [Int] {
+        var generator = SeededRandomNumberGenerator(seed: UInt64(bitPattern: Int64(seed)))
+        var indexes = Array(0..<count)
+
+        for currentIndex in stride(from: indexes.count - 1, through: 1, by: -1) {
+            let randomIndex = Int.random(in: 0...currentIndex, using: &generator)
+            indexes.swapAt(currentIndex, randomIndex)
+        }
+
+        return indexes
+    }
+
+    private func positiveModulo(_ value: Int, _ divisor: Int) -> Int {
+        let remainder = value % divisor
+        return remainder >= 0 ? remainder : remainder + divisor
+    }
+}
+
+private struct SeededRandomNumberGenerator: RandomNumberGenerator {
+    private var state: UInt64
+
+    init(seed: UInt64) {
+        self.state = seed == 0 ? 0x9E3779B97F4A7C15 : seed
+    }
+
+    mutating func next() -> UInt64 {
+        state &+= 0x9E3779B97F4A7C15
+        var value = state
+        value = (value ^ (value >> 30)) &* 0xBF58476D1CE4E5B9
+        value = (value ^ (value >> 27)) &* 0x94D049BB133111EB
+        return value ^ (value >> 31)
     }
 }
 
